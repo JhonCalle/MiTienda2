@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "544586726302",
+    "project_id": "mitienda2-59fd5",
+    "storage_bucket": "mitienda2-59fd5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544586726302:android:14480b2d9268cecb50f48f",
+        "android_client_info": {
+          "package_name": "com.example.mitienda2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544586726302-kkh7cg09euj57pluspfnvlk3giul57lg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjLBp9cYVRJxK9-rAafqQWlYqWvo_lsFg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544586726302-kkh7cg09euj57pluspfnvlk3giul57lg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
