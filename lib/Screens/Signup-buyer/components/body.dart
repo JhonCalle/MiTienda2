@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mitienda2/Screens/Login/login_screen.dart';
-import 'package:mitienda2/Screens/Signup/components/background.dart';
-import 'package:mitienda2/Screens/Signup/components/or_divider.dart';
-import 'package:mitienda2/Screens/Signup/components/social_icon.dart';
+import 'package:mitienda2/Screens/Signup-seller/components/or_divider.dart';
+import 'package:mitienda2/Screens/Signup-seller/components/background.dart';
+import 'package:mitienda2/Screens/Signup-seller/components/social_icon.dart';
 import 'package:mitienda2/auth_provider/login_controller.dart';
 import 'package:mitienda2/components/already_have_an_account_acheck.dart';
 import 'package:mitienda2/components/rounded_button.dart';
@@ -30,19 +30,23 @@ class _BodyState extends State<Body> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            SizedBox(height: size.height * 0.04),
             Text(
-              " \nREGÍSTRATE",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30, color: kPrimaryColor),
+              " REGÍSTRATE",
+              style: TextStyle(fontWeight: FontWeight.bold,
+                  fontSize: 30,
+                  color: kPrimaryColor),
               textAlign: TextAlign.center,
             ),
             Text(
-              "Estás a punto de vivir una experiencia nueva",
+              "Una nueva forma de conectar",
               style: TextStyle(fontSize: 20, color: kPrimaryColor),
               textAlign: TextAlign.center,
             ),
             SizedBox(height: size.height * 0.03),
             SvgPicture.asset(
-              "assets/icons/signup.svg",
+              //TODO cargar imagen login del comprador
+              "assets/icons/Signup-seller-vendor-vendor-vendor.svg",
               height: size.height * 0.35,
             ),
             RoundedInputField(
@@ -88,26 +92,23 @@ class _BodyState extends State<Body> {
                 ),
               ],
             ),
+            SizedBox(height: size.height * 0.03),
             GestureDetector(
-              onTap: (){ print("holiiiiii");},
+              onTap: () {
+                print("Buyer");
+                Navigator.pushNamed(context, '/signup_seller');
+              },
               child: Text(
-                "\nRegístrame como vendedor\n",
+                "Regístrame como vendedor",
                 style: TextStyle(
                   color: kothercolor,
                   fontWeight: FontWeight.bold,
                 ),
               ),
             ),
+            SizedBox(height: size.height * 0.03),
           ],
         ),
-      ),
-    );
-  }
-  Expanded buildDivider() {
-    return Expanded(
-      child: Divider(
-        color: Color(0xFFD9D9D9),
-        height: 1.5,
       ),
     );
   }

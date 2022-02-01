@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mitienda2/Screens/Login/login_screen.dart';
-import 'package:mitienda2/Screens/Signup/signup_screen.dart';
 import 'package:mitienda2/Screens/Welcome/components/background.dart';
 import 'package:mitienda2/components/rounded_button.dart';
 import 'package:mitienda2/constants.dart';
@@ -15,11 +13,13 @@ class Body extends StatelessWidget {
     return Background(
       child: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
               "BIENVENIDO A\n¡TIENDAS YA!",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35, color:kPrimaryColor),
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 35,
+                  color: kPrimaryColor),
               textAlign: TextAlign.center,
             ),
             SizedBox(height: size.height * 0.05),
@@ -31,14 +31,7 @@ class Body extends StatelessWidget {
             RoundedButton(
               text: "ENTRAR",
               press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return LoginScreen();
-                    },
-                  ),
-                );
+                Navigator.pushNamed(context, '/login');
               },
             ),
             RoundedButton(
@@ -46,16 +39,18 @@ class Body extends StatelessWidget {
               color: kPrimaryLightColor,
               textColor: Colors.black,
               press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return SignUpScreen();
-                    },
-                  ),
-                );
+                Navigator.pushNamed(context, '/signup_buyer');
               },
             ),
+            RoundedButton(
+              text: "Cart",
+              color: kPrimaryLightColor,
+              textColor: Colors.black,
+              press: () {
+                Navigator.pushNamed(context, '/cart');
+              },
+            ),
+
           ],
         ),
       ),
